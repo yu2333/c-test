@@ -1,18 +1,29 @@
-﻿生成启动时间为 2016/12/1 9:38:22。
-     1>项目“G:\C++projects\pattens\pattens\pattens.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2016/12/8 14:52:01。
+     1>项目“G:\softWarePattens\c-test\pattens\pattens.vcxproj”在节点 2 上(Build 个目标)。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(362,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
      1>ClCompile:
-         D:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\pattens.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt pattens.cpp
-         pattens.cpp
+         D:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\pattens.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /FS observable.cpp observer.cpp
+         observer.cpp
+         observable.cpp
+         正在生成代码...
        Link:
-         D:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\C++projects\pattens\Debug\pattens.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\C++projects\pattens\Debug\pattens.pdb" /SUBSYSTEM:CONSOLE,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\C++projects\pattens\Debug\pattens.lib" /MACHINE:X86 Debug\entry.obj
+         D:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\softWarePattens\c-test\Debug\pattens.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\softWarePattens\c-test\Debug\pattens.pdb" /SUBSYSTEM:CONSOLE,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\softWarePattens\c-test\Debug\pattens.lib" /MACHINE:X86 Debug\abstractUndoSupport.obj
+         Debug\addObserverEdit.obj
+         Debug\compoundEdit.obj
+         Debug\deleteObserverEdit.obj
+         Debug\entry.obj
          Debug\observable.obj
          Debug\observer.obj
          Debug\pattens.obj
+         Debug\setContentEdit.obj
          Debug\stdafx.obj
-         pattens.vcxproj -> G:\C++projects\pattens\Debug\pattens.exe
-     1>已完成生成项目“G:\C++projects\pattens\pattens\pattens.vcxproj”(Build 个目标)的操作。
+         Debug\undoEdit.obj
+         Debug\undoManager.obj
+         Debug\undoSupport.obj
+         Debug\upDateEdit.obj
+         pattens.vcxproj -> G:\softWarePattens\c-test\Debug\pattens.exe
+     1>已完成生成项目“G:\softWarePattens\c-test\pattens\pattens.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:02.94
+已用时间 00:00:03.52

@@ -52,6 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,21 +80,39 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="abstractUndoSupport.h" />
+    <ClInclude Include="addObserverEdit.h" />
+    <ClInclude Include="compoundEdit.h" />
+    <ClInclude Include="deleteObserverEdit.h" />
     <ClInclude Include="entry.h" />
     <ClInclude Include="observable.h" />
     <ClInclude Include="observer.h" />
+    <ClInclude Include="setContentEdit.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="undoEdit.h" />
+    <ClInclude Include="undoManager.h" />
+    <ClInclude Include="undoSupport.h" />
+    <ClInclude Include="upDateEdit.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="abstractUndoSupport.cpp" />
+    <ClCompile Include="addObserverEdit.cpp" />
+    <ClCompile Include="compoundEdit.cpp" />
+    <ClCompile Include="deleteObserverEdit.cpp" />
     <ClCompile Include="entry.cpp" />
     <ClCompile Include="observable.cpp" />
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="pattens.cpp" />
+    <ClCompile Include="setContentEdit.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="undoEdit.cpp" />
+    <ClCompile Include="undoManager.cpp" />
+    <ClCompile Include="undoSupport.cpp" />
+    <ClCompile Include="upDateEdit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

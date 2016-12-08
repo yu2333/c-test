@@ -30,5 +30,5 @@ bool observer::hasSame(entry *pe)
 
 void observer::onUpdate(entry* pe)
 {
-	content = pe->getContent();
+	setContent(pe->getContent());
 }

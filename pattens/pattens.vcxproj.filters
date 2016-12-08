@@ -33,6 +33,33 @@
     <ClInclude Include="observer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="undoSupport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractUndoSupport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="undoEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="compoundEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="undoManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="addObserverEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="deleteObserverEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="setContentEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="upDateEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +75,33 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="observer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="undoSupport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="abstractUndoSupport.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="undoEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="compoundEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="undoManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="addObserverEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="deleteObserverEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="setContentEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="upDateEdit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

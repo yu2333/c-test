@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "observable.h"
+#include "upDateEdit.h"
+#include "addObserverEdit.h"
+#include "deleteObserverEdit.h"
 
 
 observable::observable(string Name, string Content)
@@ -56,12 +59,24 @@ void observable::onUpdate(entry* pe)
 
 void observable::updateAll(entry* pe)
 {
+	upDateEdit* edit = NULL;
+	if (requireUndo())
+		edit = new upDateEdit(this, pe->getContent());
+	content = pe->getContent();
+	postEdit(edit);
+	list<entry*>::iterator it = obList.begin();
+	for (; it != obList.end(); ++it)
+	{
+		(*it)->setCompoundEdit(edit);
+		(*it)->onUpdate(pe);
+	}
+	endCompoundEdit();/*
 	content = pe->getContent();
 	list<entry*>::iterator it = obList.begin();
 	for (; it != obList.end(); ++it)
 	{
 		(*it)->onUpdate(pe);
-	}
+	}*/
 }
 
 void observable::addObserver(entry* po)
@@ -72,12 +87,31 @@ void observable::addObserver(entry* po)
 	}
 	else
 	{
+		addObserverEdit* edit = NULL;
+		if (requireUndo())
+			edit = new addObserverEdit(this, po);
 		obList.push_back(po);
+		postEdit(edit);
+		//obList.push_back(po);
 	}
 }
 
 void observable::deleteObserver(entry* po)
 {
+	deleteObserverEdit* edit = NULL;
+	if (requireUndo())
+		edit = new deleteObserverEdit(this, po);
+	list<entry*>::iterator it = obList.begin();
+	for (; it != obList.end(); ++it)
+	{
+		if ((*it) == po)
+		{
+			obList.erase(it);
+			postEdit(edit);
+			return;
+		}
+	}
+	/*
 	list<entry*>::iterator it = obList.begin();
 	for (; it != obList.end(); ++it)
 	{
@@ -86,5 +120,5 @@ void observable::deleteObserver(entry* po)
 			obList.erase(it);
 			return;
 		}
-	}
+	}*/
 }

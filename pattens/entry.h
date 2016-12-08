@@ -1,16 +1,14 @@
 #pragma once
-#include <iostream>
-#include <string>
-using std::string;
-
-using namespace std;
-class entry
+#include "undoSupport.h"
+class entry:
+	public undoSupport
 {
 public:
 	entry();
 	~entry();
 	string getName(){ return name; };
 	string getContent(){ return content; };
+	void setContent(string);
 
 	//用于检测此实体中是否包含与pe相同的实体
 	virtual bool hasSame(entry *pe){ return false; };
