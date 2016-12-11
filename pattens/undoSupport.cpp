@@ -25,13 +25,19 @@ void undoSupport::setUndoManager(undoManager* UndoManager)
 
 void undoSupport::postEdit(undoEdit* anEdit)
 {
-	if (!canUpdate() || anEdit == NULL)
+	if (!canUpdate())
 		return;
+	if (anEdit == NULL)
+	{
+		_compoundEdit = NULL;
+		return;
+	}
 	//此操作时复合操作的一部分时
 	if (_compoundEdit != NULL)
 	{
 		_compoundEdit->addEdit(anEdit);
 		_compoundEdit = NULL;
+		return;
 	}
 	//此操作被undoManager管理时
 	if (_undoManager != NULL)

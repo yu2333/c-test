@@ -60,6 +60,15 @@
     <ClInclude Include="upDateEdit.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="entryContainer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="eraseEntryEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="createEntryEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -102,6 +111,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="upDateEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="entryContainer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eraseEntryEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="createEntryEdit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

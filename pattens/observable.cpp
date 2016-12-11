@@ -9,6 +9,7 @@ observable::observable(string Name, string Content)
 {
 	name = Name;
 	content = Content;
+	type = "observable";
 }
 
 
@@ -43,6 +44,8 @@ void observable::display(string s)
 bool observable::hasSame(entry* pe)
 {
 	list<entry*>::iterator it = obList.begin();
+	if (this == pe)
+		return true;
 	for (; it != obList.end(); ++it)
 	{
 		if ((*it)->hasSame(pe))
@@ -63,20 +66,13 @@ void observable::updateAll(entry* pe)
 	if (requireUndo())
 		edit = new upDateEdit(this, pe->getContent());
 	content = pe->getContent();
-	postEdit(edit);
 	list<entry*>::iterator it = obList.begin();
 	for (; it != obList.end(); ++it)
 	{
 		(*it)->setCompoundEdit(edit);
 		(*it)->onUpdate(pe);
 	}
-	endCompoundEdit();/*
-	content = pe->getContent();
-	list<entry*>::iterator it = obList.begin();
-	for (; it != obList.end(); ++it)
-	{
-		(*it)->onUpdate(pe);
-	}*/
+	postEdit(edit);
 }
 
 void observable::addObserver(entry* po)
@@ -89,14 +85,23 @@ void observable::addObserver(entry* po)
 	{
 		addObserverEdit* edit = NULL;
 		if (requireUndo())
-			edit = new addObserverEdit(this, po);
+			edit = new addObserverEdit(this, po); 
+		list<entry*>::iterator it = obList.begin();
+		for (; it != obList.end(); ++it)
+		{
+			if ((*it) == po)
+			{
+				cout << "\nThe observer has been exsited." << endl;
+				postEdit(NULL);
+				return ;
+			}
+		}
 		obList.push_back(po);
 		postEdit(edit);
-		//obList.push_back(po);
 	}
 }
 
-void observable::deleteObserver(entry* po)
+bool observable::deleteObserver(entry* po)
 {
 	deleteObserverEdit* edit = NULL;
 	if (requireUndo())
@@ -108,17 +113,9 @@ void observable::deleteObserver(entry* po)
 		{
 			obList.erase(it);
 			postEdit(edit);
-			return;
+			return true;
 		}
 	}
-	/*
-	list<entry*>::iterator it = obList.begin();
-	for (; it != obList.end(); ++it)
-	{
-		if ((*it) == po)
-		{
-			obList.erase(it);
-			return;
-		}
-	}*/
+	postEdit(NULL);
+	return false;
 }

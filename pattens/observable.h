@@ -14,7 +14,7 @@ public:
 	~observable();
 
 	void addObserver(entry* po);
-	void deleteObserver(entry* po);
+	bool deleteObserver(entry* po);
 	void updateAll(entry* pe);
 
 	virtual bool hasSame(entry *pe);

@@ -22,5 +22,6 @@ private:
 	undoEdit* edits[MAX_UNDO];
 	int start;
 	int next;
-	int end;
+	int size;
+	bool duringUndo;			//记录上一操作是否为undo
 };

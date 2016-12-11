@@ -7,9 +7,9 @@ setContentEdit::setContentEdit(entry* Entry, string s)
 	orignal = Entry->getContent();
 	after = s;
 	support = Entry;
+	pen = Entry;
 
-	undoName = "set the content of " + Entry->getName();
-	redoName = "recover the content of " + Entry->getName();
+	redoName = undoName = "set the content of " + Entry->getName();
 }
 
 

@@ -8,6 +8,8 @@ public:
 	~entry();
 	string getName(){ return name; };
 	string getContent(){ return content; };
+	string getType(){ return type; };
+	string toStirng(){ return type + ": " + name + "   content: " + content; };
 	void setContent(string);
 
 	//用于检测此实体中是否包含与pe相同的实体
@@ -22,5 +24,6 @@ public:
 protected:
 	string name;
 	string content;
+	string type;
 };
 

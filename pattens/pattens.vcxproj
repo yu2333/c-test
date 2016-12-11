@@ -25,7 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -83,8 +83,11 @@
     <ClInclude Include="abstractUndoSupport.h" />
     <ClInclude Include="addObserverEdit.h" />
     <ClInclude Include="compoundEdit.h" />
+    <ClInclude Include="createEntryEdit.h" />
     <ClInclude Include="deleteObserverEdit.h" />
     <ClInclude Include="entry.h" />
+    <ClInclude Include="entryContainer.h" />
+    <ClInclude Include="eraseEntryEdit.h" />
     <ClInclude Include="observable.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="setContentEdit.h" />
@@ -99,8 +102,11 @@
     <ClCompile Include="abstractUndoSupport.cpp" />
     <ClCompile Include="addObserverEdit.cpp" />
     <ClCompile Include="compoundEdit.cpp" />
+    <ClCompile Include="createEntryEdit.cpp" />
     <ClCompile Include="deleteObserverEdit.cpp" />
     <ClCompile Include="entry.cpp" />
+    <ClCompile Include="entryContainer.cpp" />
+    <ClCompile Include="eraseEntryEdit.cpp" />
     <ClCompile Include="observable.cpp" />
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="pattens.cpp" />

@@ -4,6 +4,7 @@
 
 compoundEdit::compoundEdit()
 {
+	inProgress = true;
 }
 
 

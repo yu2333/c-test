@@ -42,7 +42,7 @@ void undoEdit::undo()
 {
 	if (!canUndo())
 	{
-		cout << endl << getUndoPresentationName() << " can't be undo." << endl;
+		cout << endl << getUndoPresentationName() << " can't be undone." << endl;
 	}
 	hasBeenUndo = true;
 	
@@ -51,7 +51,7 @@ void undoEdit::undo()
 	_undo();
 	if (support != NULL)
 		support->startUpdate();
-	cout << getRedoPresentationName() << " has been undone." << endl;
+	cout << "Edit( " << getRedoPresentationName() << " ) has been undone." << endl;
 }
 
 void undoEdit::redo()
@@ -66,5 +66,5 @@ void undoEdit::redo()
 	_redo();
 	if (support != NULL)
 		support->startUpdate();
-	cout << getRedoPresentationName() << " has been redo." << endl;
+	cout << "Edit( " << getRedoPresentationName() << " ) has been redone." << endl;
 }

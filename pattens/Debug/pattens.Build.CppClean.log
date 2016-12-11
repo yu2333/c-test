@@ -14,6 +14,10 @@ g:\softwarepattens\c-test\pattens\debug\undoedit.obj
 g:\softwarepattens\c-test\pattens\debug\undomanager.obj
 g:\softwarepattens\c-test\pattens\debug\undosupport.obj
 g:\softwarepattens\c-test\pattens\debug\updateedit.obj
+g:\softwarepattens\c-test\pattens\debug\entrycontainer.obj
+g:\softwarepattens\c-test\pattens\debug\createobserveredit.obj
+g:\softwarepattens\c-test\pattens\debug\eraseentryedit.obj
+g:\softwarepattens\c-test\pattens\debug\createentryedit.obj
 g:\softwarepattens\c-test\debug\pattens.ilk
 g:\softwarepattens\c-test\debug\pattens.exe
 g:\softwarepattens\c-test\debug\pattens.pdb

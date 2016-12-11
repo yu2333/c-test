@@ -6,6 +6,7 @@ observer::observer(string Name, string Content)
 {
 	name = Name;
 	content = Content;
+	type = "observer";
 }
 
 

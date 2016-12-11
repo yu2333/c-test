@@ -1,0 +1,32 @@
+﻿生成启动时间为 2016/12/11 12:58:19。
+     1>项目“G:\softWarePattens\c-test\pattens\pattens.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(362,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
+     1>ClCompile:
+         D:\vs2013\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\pattens.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt undoSupport.cpp
+         undoSupport.cpp
+       Link:
+         D:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\softWarePattens\c-test\Release\pattens.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\softWarePattens\c-test\Release\pattens.pdb" /SUBSYSTEM:CONSOLE,"5.01" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\softWarePattens\c-test\Release\pattens.lib" /MACHINE:X86 /SAFESEH Release\abstractUndoSupport.obj
+         Release\addObserverEdit.obj
+         Release\compoundEdit.obj
+         Release\createEntryEdit.obj
+         Release\deleteObserverEdit.obj
+         Release\entry.obj
+         Release\entryContainer.obj
+         Release\eraseEntryEdit.obj
+         Release\observable.obj
+         Release\observer.obj
+         Release\pattens.obj
+         Release\setContentEdit.obj
+         Release\stdafx.obj
+         Release\undoEdit.obj
+         Release\undoManager.obj
+         Release\undoSupport.obj
+         Release\upDateEdit.obj
+         正在生成代码
+         已完成代码的生成
+         pattens.vcxproj -> G:\softWarePattens\c-test\Release\pattens.exe
+     1>已完成生成项目“G:\softWarePattens\c-test\pattens\pattens.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.69

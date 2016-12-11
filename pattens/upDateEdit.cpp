@@ -6,9 +6,9 @@ upDateEdit::upDateEdit(entry* Entry, string s)
 	orignal = Entry->getContent();
 	after = s;
 	support = Entry;
+	pen = Entry;
 
-	undoName = "update the content of " + Entry->getName();
-	redoName = "recover the content of " + Entry->getName();
+	redoName = undoName = "update the content of " + Entry->getName();
 }
 
 
@@ -37,10 +37,12 @@ bool upDateEdit::addEdit(undoEdit* aEdit)
 
 void upDateEdit::_undo()
 {
+	compoundEdit::_undo();
 	pen->setContent(orignal);
 }
 
 void upDateEdit::_redo()
 {
+	compoundEdit::_redo();
 	pen->setContent(after);
 }
